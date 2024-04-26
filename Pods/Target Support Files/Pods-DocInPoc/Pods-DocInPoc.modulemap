@@ -1,0 +1,6 @@
+module Pods_DocInPoc {
+  umbrella header "Pods-DocInPoc-umbrella.h"
+
+  export *
+  module * { export * }
+}

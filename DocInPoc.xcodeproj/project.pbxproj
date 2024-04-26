@@ -10,9 +10,9 @@
 		0F7B3FBC2BDC3A6500F34827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B3FBB2BDC3A6500F34827 /* AppDelegate.swift */; };
 		0F7B3FBE2BDC3A6500F34827 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B3FBD2BDC3A6500F34827 /* SceneDelegate.swift */; };
 		0F7B3FC02BDC3A6500F34827 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B3FBF2BDC3A6500F34827 /* ViewController.swift */; };
-		0F7B3FC32BDC3A6500F34827 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B3FC22BDC3A6500F34827 /* Base */; };
 		0F7B3FC52BDC3A6600F34827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B3FC42BDC3A6600F34827 /* Assets.xcassets */; };
 		0F7B3FC82BDC3A6600F34827 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B3FC72BDC3A6600F34827 /* Base */; };
+		593177F4BECE47AF1962C683 /* libPods-DocInPoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F2CCA013EF416510D128D6 /* libPods-DocInPoc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,12 @@
 		0F7B3FBB2BDC3A6500F34827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7B3FBD2BDC3A6500F34827 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0F7B3FBF2BDC3A6500F34827 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F7B3FC22BDC3A6500F34827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F7B3FC42BDC3A6600F34827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7B3FC72BDC3A6600F34827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F7B3FC92BDC3A6600F34827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8E8812A7E26192AC4550B5 /* Pods-DocInPoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocInPoc.release.xcconfig"; path = "Target Support Files/Pods-DocInPoc/Pods-DocInPoc.release.xcconfig"; sourceTree = "<group>"; };
+		95F2CCA013EF416510D128D6 /* libPods-DocInPoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DocInPoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADFF56737BA3CADE1D324129 /* Pods-DocInPoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocInPoc.debug.xcconfig"; path = "Target Support Files/Pods-DocInPoc/Pods-DocInPoc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593177F4BECE47AF1962C683 /* libPods-DocInPoc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,8 @@
 			children = (
 				0F7B3FBA2BDC3A6500F34827 /* DocInPoc */,
 				0F7B3FB92BDC3A6500F34827 /* Products */,
+				64199C01D6AC63A4B3B6DE20 /* Pods */,
+				EC3AAE90561FE6ED2C3E4E51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +64,28 @@
 				0F7B3FBB2BDC3A6500F34827 /* AppDelegate.swift */,
 				0F7B3FBD2BDC3A6500F34827 /* SceneDelegate.swift */,
 				0F7B3FBF2BDC3A6500F34827 /* ViewController.swift */,
-				0F7B3FC12BDC3A6500F34827 /* Main.storyboard */,
 				0F7B3FC42BDC3A6600F34827 /* Assets.xcassets */,
 				0F7B3FC62BDC3A6600F34827 /* LaunchScreen.storyboard */,
 				0F7B3FC92BDC3A6600F34827 /* Info.plist */,
 			);
 			path = DocInPoc;
+			sourceTree = "<group>";
+		};
+		64199C01D6AC63A4B3B6DE20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF56737BA3CADE1D324129 /* Pods-DocInPoc.debug.xcconfig */,
+				4A8E8812A7E26192AC4550B5 /* Pods-DocInPoc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC3AAE90561FE6ED2C3E4E51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95F2CCA013EF416510D128D6 /* libPods-DocInPoc.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F7B3FCC2BDC3A6600F34827 /* Build configuration list for PBXNativeTarget "DocInPoc" */;
 			buildPhases = (
+				DBC9C1633C58282F88DC10E0 /* [CP] Check Pods Manifest.lock */,
 				0F7B3FB42BDC3A6500F34827 /* Sources */,
 				0F7B3FB52BDC3A6500F34827 /* Frameworks */,
 				0F7B3FB62BDC3A6500F34827 /* Resources */,
+				FA0A5CD9F626741D6372DB6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,11 +150,52 @@
 			files = (
 				0F7B3FC52BDC3A6600F34827 /* Assets.xcassets in Resources */,
 				0F7B3FC82BDC3A6600F34827 /* Base in Resources */,
-				0F7B3FC32BDC3A6500F34827 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBC9C1633C58282F88DC10E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DocInPoc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0A5CD9F626741D6372DB6C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DocInPoc/Pods-DocInPoc-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DocInPoc/Pods-DocInPoc-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DocInPoc/Pods-DocInPoc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F7B3FB42BDC3A6500F34827 /* Sources */ = {
@@ -147,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0F7B3FC12BDC3A6500F34827 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F7B3FC22BDC3A6500F34827 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0F7B3FC62BDC3A6600F34827 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,19 +343,23 @@
 		};
 		0F7B3FCD2BDC3A6600F34827 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADFF56737BA3CADE1D324129 /* Pods-DocInPoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HSY5R94H24;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocInPoc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DocInPoc;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,19 +375,23 @@
 		};
 		0F7B3FCE2BDC3A6600F34827 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8E8812A7E26192AC4550B5 /* Pods-DocInPoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HSY5R94H24;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocInPoc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DocInPoc;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
