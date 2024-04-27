@@ -22,7 +22,7 @@
 		0F7B3FBF2BDC3A6500F34827 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F7B3FC42BDC3A6600F34827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7B3FC72BDC3A6600F34827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0F7B3FC92BDC3A6600F34827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA0568E2BDD6E1100582E85 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DocInPoc/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		4A8E8812A7E26192AC4550B5 /* Pods-DocInPoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocInPoc.release.xcconfig"; path = "Target Support Files/Pods-DocInPoc/Pods-DocInPoc.release.xcconfig"; sourceTree = "<group>"; };
 		95F2CCA013EF416510D128D6 /* libPods-DocInPoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DocInPoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF56737BA3CADE1D324129 /* Pods-DocInPoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocInPoc.debug.xcconfig"; path = "Target Support Files/Pods-DocInPoc/Pods-DocInPoc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,11 +64,19 @@
 				0F7B3FBB2BDC3A6500F34827 /* AppDelegate.swift */,
 				0F7B3FBD2BDC3A6500F34827 /* SceneDelegate.swift */,
 				0F7B3FBF2BDC3A6500F34827 /* ViewController.swift */,
-				0F7B3FC42BDC3A6600F34827 /* Assets.xcassets */,
-				0F7B3FC62BDC3A6600F34827 /* LaunchScreen.storyboard */,
-				0F7B3FC92BDC3A6600F34827 /* Info.plist */,
+				0FD119DA2BDD6DBF00CE243C /* Resources */,
 			);
 			path = DocInPoc;
+			sourceTree = "<group>";
+		};
+		0FD119DA2BDD6DBF00CE243C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FA0568E2BDD6E1100582E85 /* Info.plist */,
+				0F7B3FC42BDC3A6600F34827 /* Assets.xcassets */,
+				0F7B3FC62BDC3A6600F34827 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		64199C01D6AC63A4B3B6DE20 /* Pods */ = {
@@ -352,7 +360,7 @@
 				DEVELOPMENT_TEAM = HSY5R94H24;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DocInPoc/Info.plist;
+				INFOPLIST_FILE = DocInPoc/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DocInPoc;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -384,7 +392,7 @@
 				DEVELOPMENT_TEAM = HSY5R94H24;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DocInPoc/Info.plist;
+				INFOPLIST_FILE = DocInPoc/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DocInPoc;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
