@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.8.1)
   - KeychainAccess (4.2.2)
   - ReachabilitySwift (5.0.0)
   - RxCocoa (6.6.0):
@@ -17,6 +18,7 @@ PODS:
   - Wormholy (1.7.0)
 
 DEPENDENCIES:
+  - Alamofire
   - KeychainAccess
   - ReachabilitySwift
   - RxCocoa
@@ -28,6 +30,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - KeychainAccess
     - ReachabilitySwift
     - RxCocoa
@@ -39,6 +42,7 @@ SPEC REPOS:
     - Wormholy
 
 SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
@@ -49,6 +53,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Wormholy: ab1c8c2f02f58587a0941deb0088555ffbf039a1
 
-PODFILE CHECKSUM: 584a0130628bd108ea7646da7d6c51c2f45078ac
+PODFILE CHECKSUM: 4123331384d20be62439294517cd8e846f07e0ad
 
 COCOAPODS: 1.14.3

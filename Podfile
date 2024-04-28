@@ -2,6 +2,7 @@
 # platform :ios, '9.0'
 
 target 'DocInPoc' do
+  pod 'Alamofire'
   pod 'SDWebImage'
   pod 'SnapKit'
   pod 'Wormholy', :configurations => ['Debug']

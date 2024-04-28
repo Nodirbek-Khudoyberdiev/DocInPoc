@@ -6,17 +6,24 @@
 //
 
 import UIKit
+import RxSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private var coordinator: AppCoordinator!
+    private let disposeBag = DisposeBag()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let navigationController = UINavigationController(rootViewController: ViewController())
+        let navigationController = UINavigationController()
+        coordinator = AppCoordinator(navigationController: navigationController)
+        coordinator.start(DependencyContainer.shared)
+            .subscribe()
+            .disposed(by: disposeBag)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
