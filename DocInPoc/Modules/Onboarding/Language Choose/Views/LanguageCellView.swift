@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol LanguageCellDelegate: AnyObject {
+    func didSelect(type: Localization)
+}
+
 class LanguageCellView: BaseView {
+    
+    weak var delegate: LanguageCellDelegate?
     
     var touchesBegin: UIColor? {
         return .Gray.selectingGray
@@ -18,6 +24,7 @@ class LanguageCellView: BaseView {
     }
     
     var isSelectionEnabled: Bool = true
+    var type: Localization?
     
     private lazy var arrowRightImageView = UIImageView.defualtImageView()
     private lazy var titleLabel: UILabel = {
@@ -38,7 +45,7 @@ class LanguageCellView: BaseView {
     }
     
     func setupConstrains() {
-        
+        addTapGesture(tapNumber: 1, target: self, action: #selector(didSelectCell))
         snp.makeConstraints({
             $0.height.equalTo(61)
         })
@@ -62,9 +69,12 @@ class LanguageCellView: BaseView {
     }
     
     func buildCell(with type: Localization){
+        self.type = type
         titleLabel.text = type.title
     }
     
-    
+    @objc func didSelectCell(){
+        delegate?.didSelect(type: type!)
+    }
     
 }

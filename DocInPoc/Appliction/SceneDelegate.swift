@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         let navigationController = UINavigationController()
+        navigationController.setNavigationBarHidden(true, animated: false)
         coordinator = AppCoordinator(navigationController: navigationController)
         coordinator.start(DependencyContainer.shared)
             .subscribe()

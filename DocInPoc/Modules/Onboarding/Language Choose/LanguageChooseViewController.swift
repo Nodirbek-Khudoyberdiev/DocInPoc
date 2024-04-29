@@ -10,16 +10,18 @@ import RxSwift
 
 class LanguageChooseViewController: BaseViewController<LanguageChooseView> {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
+    let languageSelected = PublishSubject<Void>()
     
     override func loadView() {
         super.loadView()
-        view = mainView()
+        view = LanguageChooseView(delegate: self)
     }
 
 }
 
+
+extension LanguageChooseViewController: LanguageCellDelegate {
+    func didSelect(type: Localization) {
+        languageSelected.onNext(())
+    }
+}

@@ -39,7 +39,7 @@ class ReactiveCoordinator<ResultType>: NSObject {
         guard let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as? SceneDelegate,
               let window = sceneDelegate.window else { return }
         
-        let navVC = NavigationController(rootViewController: viewController)
+        let navVC = UINavigationController(rootViewController: viewController)
         navVC.setNavigationBarHidden(true, animated: false)
         window.rootViewController = navVC
         

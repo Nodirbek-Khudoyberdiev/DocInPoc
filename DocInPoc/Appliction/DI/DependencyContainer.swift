@@ -21,7 +21,9 @@ final class DependencyContainer: DependencyContainerProtocol {
 // MARK: ViewController DI
 
 extension DependencyContainer {
-    
+    func languageChooseController() -> LanguageChooseViewController {
+        return LanguageChooseViewController()
+    }
 }
 
 // MARK: Workers DI

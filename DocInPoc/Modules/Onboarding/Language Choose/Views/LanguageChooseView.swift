@@ -56,6 +56,17 @@ final class LanguageChooseView: BaseView {
         return imageView
     }()
     
+    let delegate: LanguageCellDelegate?
+    
+    init(delegate: LanguageCellDelegate?) {
+        self.delegate = delegate
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
     func setup() {
         let uzTitle = generateTitleLabel(.mediumFont(size: 22), type: .uz, color: .appDarkColor)
         let engTitle = generateTitleLabel(.mediumFont(size: 14), type: .eng, color: .Gray.appGray)
@@ -67,6 +78,7 @@ final class LanguageChooseView: BaseView {
         [Localization.UZ, Localization.ENGLISH, Localization.RUSSIAN].forEach({
             let cell = LanguageCellView()
             cell.buildCell(with: $0)
+            cell.delegate = delegate
             languagesStackView.addArrangedSubview(cell)
         })
         
@@ -79,7 +91,7 @@ final class LanguageChooseView: BaseView {
     
     func setupConstrains() {
         dipImageView.snp.makeConstraints({
-            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(56)
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(36)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(104)
             $0.height.equalTo(157)

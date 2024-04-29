@@ -16,8 +16,8 @@ class AppCoordinator: ReactiveCoordinator<Void> {
     }
     
     override func start(_ di: DependencyContainerProtocol) -> Observable<Void> {
-        navigationController.setViewControllers([LanguageChooseViewController()], animated: false)
-        return Observable.never()
+        let languageChooseCoordinator = LanguageChooseCoordinator(navigationController: navigationController)
+        return coordinate(to: languageChooseCoordinator)
     }
 
 }
