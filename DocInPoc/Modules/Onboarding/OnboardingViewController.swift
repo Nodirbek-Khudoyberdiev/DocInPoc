@@ -70,7 +70,7 @@ private extension OnboardingViewController {
     func swipeCell(direction: UISwipeGestureRecognizer.Direction){
         guard let visibleIndex = Utils.shared.getVisibleCell(for: mainView().collectionView) else { return }
         let nextIndex = direction == .left ? visibleIndex.row + 1 : visibleIndex.row - 1
-        if nextIndex != onboardingVM.count || nextIndex < 0 {
+        if nextIndex != onboardingVM.count && nextIndex >= 0 {
             let nextIndexPath = IndexPath(row: nextIndex, section: 0)
             mainView().collectionView.isPagingEnabled = false
             mainView().collectionView.scrollToItem(at: nextIndexPath, at: .centeredHorizontally, animated: true)
