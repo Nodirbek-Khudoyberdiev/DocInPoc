@@ -22,6 +22,7 @@ class LanguageChooseViewController: BaseViewController<LanguageChooseView> {
 
 extension LanguageChooseViewController: LanguageCellDelegate {
     func didSelect(type: Localization) {
+        UserDefaults.standard.saveLocaleCode(languageCode: type)
         languageSelected.onNext(())
     }
 }

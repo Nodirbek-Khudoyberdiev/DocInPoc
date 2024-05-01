@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ViewControllerFactory {
-    
+    func onboardingVC() -> OnboardingViewController
     func languageChooseController() -> LanguageChooseViewController
 }

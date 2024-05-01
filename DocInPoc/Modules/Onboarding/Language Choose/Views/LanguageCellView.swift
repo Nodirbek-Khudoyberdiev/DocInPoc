@@ -26,7 +26,7 @@ class LanguageCellView: BaseView {
     var isSelectionEnabled: Bool = true
     var type: Localization?
     
-    private lazy var arrowRightImageView = UIImageView.defualtImageView()
+    private lazy var arrowRightImageView = UIImageView.defaultImageView()
     private lazy var titleLabel: UILabel = {
         let label = UILabel(
             font: .mediumFont(size: 16),

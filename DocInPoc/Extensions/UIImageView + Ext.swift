@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImageView {
-    static func defualtImageView() -> UIImageView {
+    static func defaultImageView() -> UIImageView {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit

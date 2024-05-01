@@ -17,6 +17,8 @@ struct OnboardingVM {
 
 class OnboardingViewController: BaseViewController<OnboardingView> {
     
+    let openAuthorization = PublishSubject<Void>()
+    
     private let onboardingVM: [OnboardingVM] = [
         .init(title: "Ищите опытных специалистов.", image: .firstOnb),
         .init(title: "Все врачи-специалисты Страны в одном месте.", image: .secondOnb),
@@ -28,6 +30,7 @@ class OnboardingViewController: BaseViewController<OnboardingView> {
         setupCollectionView()
         setupActions()
         addGestureForBottomView()
+        setupNavigationObserver()
         setBottomInfo(at: 0)
     }
     
@@ -46,13 +49,21 @@ private extension OnboardingViewController {
         mainView().collectionView.dataSource = self
     }
     
+    func setupNavigationObserver(){
+        mainView().navigationBar.onRightButton = { [weak self] in
+            self?.openAuthorization.onNext(())
+        }
+    }
+    
     func setupActions(){
         mainView().bottomInfoView.nextButton
             .rx
             .tap
             .subscribe(onNext: {[weak self] _ in
                 guard let self else { return }
-                self.swipeCell(direction: .left)
+                self.swipeCell(direction: .left) {
+                    self.openAuthorization.onNext(())
+                }
             })
             .disposed(by: bag)
     }
@@ -67,7 +78,7 @@ private extension OnboardingViewController {
             .disposed(by: bag)
     }
     
-    func swipeCell(direction: UISwipeGestureRecognizer.Direction){
+    func swipeCell(direction: UISwipeGestureRecognizer.Direction, completion: VoidBlock? = nil){
         guard let visibleIndex = Utils.shared.getVisibleCell(for: mainView().collectionView) else { return }
         let nextIndex = direction == .left ? visibleIndex.row + 1 : visibleIndex.row - 1
         if nextIndex != onboardingVM.count && nextIndex >= 0 {
@@ -76,6 +87,8 @@ private extension OnboardingViewController {
             mainView().collectionView.scrollToItem(at: nextIndexPath, at: .centeredHorizontally, animated: true)
             mainView().collectionView.isPagingEnabled = true
             setBottomInfo(at: nextIndex)
+        } else {
+            completion?()
         }
     }
     

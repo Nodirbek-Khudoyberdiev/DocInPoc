@@ -20,6 +20,7 @@ protocol SetupViewProtocol {
     var isSelectionEnabled: Bool { get }
     func setup()
     func setupConstrains()
+    func reload()
 }
 extension SetupViewProtocol  {
     
@@ -35,6 +36,8 @@ extension SetupViewProtocol  {
     var touchesBegin: UIColor? {
         return nil
     }
+    
+    func reload(){}
 }
 
 class SetupTableHeaderFooterView: UITableViewHeaderFooterView {

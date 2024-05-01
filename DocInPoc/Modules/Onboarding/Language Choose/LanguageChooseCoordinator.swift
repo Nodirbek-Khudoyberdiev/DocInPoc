@@ -19,21 +19,18 @@ class LanguageChooseCoordinator: ReactiveCoordinator<Void> {
     override func start(_ di: DependencyContainerProtocol) -> Observable<Void> {
         let vc = di.languageChooseController()
         vc.languageSelected
-            
-            .subscribe(onNext: {
-                let vc = OnboardingViewController()
-                self.navigationController.pushViewController(vc, animated: true)
+            .flatMap({
+                self.openOnboarding()
             })
+            .subscribe()
             .disposed(by: disposeBag)
         navigationController.pushViewController(vc, animated: true)
         return Observable.empty()
     }
     
-//    private func openOnboarding() -> Observable<Void> {
-////        let loginCoordinator = RegisterCoordinator(rootViewController: rootViewController)
-////        return coordinate(to: loginCoordinator)
-//        
-//        return Observable.empty()
-//    }
+    private func openOnboarding() -> Observable<Void> {
+        let onboardingCoordinator = OnboardingCoordinator(navigationController: navigationController)
+        return coordinate(to: onboardingCoordinator)
+    }
     
 }

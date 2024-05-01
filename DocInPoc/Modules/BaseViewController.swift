@@ -7,10 +7,13 @@
 
 import UIKit
 import RxSwift
+import RxRelay
 
 class BaseViewController<RootView: UIView>: UIViewController, ViewSpecificController {
     
     typealias RootView = RootView
+    
+    let currentLanguage = PublishSubject<Localization?>()
     
     let bag = DisposeBag()
     
@@ -18,8 +21,19 @@ class BaseViewController<RootView: UIView>: UIViewController, ViewSpecificContro
         super.init(nibName: nil, bundle: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        subscribeToCurrentLanguage()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    func subscribeToCurrentLanguage(){
+        Utils.shared.currentLanguage
+            .bind(to: currentLanguage)
+            .disposed(by: bag)
     }
     
 }

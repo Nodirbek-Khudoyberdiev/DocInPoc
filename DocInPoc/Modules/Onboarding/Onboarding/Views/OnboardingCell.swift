@@ -9,7 +9,7 @@ import UIKit
 
 class OnboardingCell: BaseCollectionCell {
     
-    let personImageView = UIImageView.defualtImageView()
+    let personImageView = UIImageView.defaultImageView()
     
     func setup() {
         contentView.addSubview(personImageView)

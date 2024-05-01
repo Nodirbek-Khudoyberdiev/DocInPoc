@@ -16,6 +16,7 @@ class AppCoordinator: ReactiveCoordinator<Void> {
     }
     
     override func start(_ di: DependencyContainerProtocol) -> Observable<Void> {
+        UserDefaults.standard.clearKeychainIfWillUnistall()
         let languageChooseCoordinator = LanguageChooseCoordinator(navigationController: navigationController)
         return coordinate(to: languageChooseCoordinator)
     }
