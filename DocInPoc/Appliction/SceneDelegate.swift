@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         coordinator.start(DependencyContainer.shared)
             .subscribe()
             .disposed(by: disposeBag)
+        window?.overrideUserInterfaceStyle = .light
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

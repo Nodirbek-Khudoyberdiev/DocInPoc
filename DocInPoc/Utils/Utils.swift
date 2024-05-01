@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
 
 class Utils {
+    
+    let currentLanguage = BehaviorSubject<Localization?>(value: nil)
     
     static let shared = Utils()
     

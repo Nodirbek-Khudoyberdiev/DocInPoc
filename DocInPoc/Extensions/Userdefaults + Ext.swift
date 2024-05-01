@@ -26,25 +26,26 @@ extension UserDefaults {
     }
     
     func saveLocaleCode(languageCode: Localization) {
-        setLanguageSaved(true)
         setValue(languageCode.rawValue, forKey: Keys.localeCode)
+        setLanguageSaved(true)
+        Utils.shared.currentLanguage.onNext(languageCode)
     }
     
     
-    func getLocaleCode() -> String {
+    func getLocaleCode() -> Localization {
         if let lang = string(forKey: Keys.localeCode) {
-            return lang
+            return Localization(rawValue: lang) ?? .UZ
         }
         
         if let currentLanguage = Locale.current.languageCode {
             if currentLanguage == Localization.RUSSIAN.rawValue {
-                return Localization.RUSSIAN.rawValue
+                return Localization.RUSSIAN
             }
             if currentLanguage == Localization.UZ.rawValue {
-                return Localization.UZ.rawValue
+                return Localization.UZ
             }
         }
-        return Localization.ENGLISH.rawValue
+        return Localization.ENGLISH
     }
     
     func clearKeychainIfWillUnistall() {

@@ -1,5 +1,5 @@
 //
-//  DiPButton.swift
+//  DiPPrimaryButton.swift
 //  DocInPoc
 //
 //  Created by Nodirbek Khudoyberdiev on 28/04/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DiPButton: UIButton {
+class DiPPrimaryButton: UIButton {
     
     let title: String
     
@@ -22,13 +22,16 @@ class DiPButton: UIButton {
     }
 }
 
-private extension DiPButton {
+private extension DiPPrimaryButton {
     
     func setup(){
-        backgroundColor = .appPrimaryColor
         setTitle(title, for: .normal)
+        setTitleColor(.white, for: .normal)
         titleLabel?.font = .mediumFont(size: 16)
-        
+        borderRadius = 16
+        setBackgroundColor(color: .appPrimaryColor, forState: .normal)
+        setBackgroundColor(color: .appPrimaryColor.withAlphaComponent(0.6), forState: .highlighted)
+        setBackgroundColor(color: .appPrimaryColor.withAlphaComponent(0.6), forState: .disabled)
         snp.makeConstraints({
             $0.height.equalTo(48)
         })
@@ -39,7 +42,7 @@ private extension DiPButton {
 
 // MARK: DiPButtonViaImage
 
-class DiPButtonViaImage: UIButton {
+class DiPPrimaryButtonViaImage: UIButton {
     
     let image: UIImage?
     
@@ -61,7 +64,7 @@ class DiPButtonViaImage: UIButton {
     
 }
 
-private extension DiPButtonViaImage {
+private extension DiPPrimaryButtonViaImage {
     
     func setup(){
         backgroundColor = .appPrimaryColor

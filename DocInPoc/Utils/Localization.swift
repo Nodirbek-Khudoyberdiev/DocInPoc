@@ -5,9 +5,9 @@
 //  Created by Nodirbek Khudoyberdiev on 28/04/24.
 //
 
-import Foundation
+import UIKit
 
-enum Localization: String {
+enum Localization: String, CaseIterable {
     case ENGLISH = "en"
     case RUSSIAN = "ru"
     case UZ = "uz"
@@ -15,7 +15,7 @@ enum Localization: String {
     
     private static func getValue(_ key: String, comment: String?) -> String {
         let localCode = UserDefaults.standard.getLocaleCode()
-        let path = Bundle.main.path(forResource: localCode, ofType: "lproj")
+        let path = Bundle.main.path(forResource: localCode.rawValue, ofType: "lproj")
         let bundle = Bundle(path: path!)
         return bundle!.localizedString(forKey: key, value: comment, table: nil)
     }
@@ -35,6 +35,17 @@ enum Localization: String {
             //        case .UzCyrclic:
             //            return "Ўзбекча"
             //        }
+        }
+    }
+    
+    var image: UIImage? {
+        switch self {
+        case .ENGLISH:
+            return .us
+        case .RUSSIAN:
+            return .ru
+        case .UZ:
+            return .uz
         }
     }
 }

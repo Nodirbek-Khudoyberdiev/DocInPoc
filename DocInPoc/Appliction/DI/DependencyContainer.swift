@@ -24,6 +24,9 @@ extension DependencyContainer {
     func languageChooseController() -> LanguageChooseViewController {
         return LanguageChooseViewController()
     }
+    func onboardingVC() -> OnboardingViewController {
+        return OnboardingViewController()
+    }
 }
 
 // MARK: Workers DI

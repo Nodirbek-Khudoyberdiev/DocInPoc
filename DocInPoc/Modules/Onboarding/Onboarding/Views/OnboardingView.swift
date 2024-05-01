@@ -28,19 +28,19 @@ class OnboardingView: BaseView {
     let bottomInfoView = OnboardingBottomInfoView()
     
     func setup() {
-        addSubviews(collectionView, navigationBar, bottomInfoView)
+        addSubviews(navigationBar, collectionView, bottomInfoView)
     }
     
     func setupConstrains() {
         
-        collectionView.snp.makeConstraints({
-            $0.top.equalTo(safeAreaLayoutGuide.snp.top)
-            $0.left.right.equalToSuperview()
-            $0.bottom.equalTo(bottomInfoView.snp.bottom)
-        })
-        
         navigationBar.snp.makeConstraints({
             $0.left.right.top.equalToSuperview()
+        })
+        
+        collectionView.snp.makeConstraints({
+            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(bottomInfoView.snp.bottom)
         })
         
         bottomInfoView.snp.makeConstraints({
@@ -68,7 +68,7 @@ class OnboardingBottomInfoView: BaseView {
         }
     }
     
-    let nextButton = DiPButtonViaImage(image: .arrowRight)
+    let nextButton = DiPPrimaryButtonViaImage(image: .arrowRight)
     
     func setup() {
         backgroundColor = UIColor(hex: "F5F7FF")

@@ -62,11 +62,15 @@
 		0FC9DCB32BDE5ADF00C35785 /* LanguageChooseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9DCB22BDE5ADF00C35785 /* LanguageChooseCoordinator.swift */; };
 		0FC9DCB62BDE5DA000C35785 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9DCB52BDE5DA000C35785 /* OnboardingViewController.swift */; };
 		0FC9DCB82BDE5DB600C35785 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9DCB72BDE5DB600C35785 /* OnboardingView.swift */; };
-		0FC9DCBB2BDE61D400C35785 /* DiPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9DCBA2BDE61D400C35785 /* DiPButton.swift */; };
+		0FC9DCBB2BDE61D400C35785 /* DiPPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9DCBA2BDE61D400C35785 /* DiPPrimaryButton.swift */; };
 		0FC9DCBD2BDE68F100C35785 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9DCBC2BDE68F100C35785 /* OnboardingCell.swift */; };
 		0FF16F732BDFE58F004FDCC5 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F722BDFE58F004FDCC5 /* NavigationBarView.swift */; };
 		0FF16F762BDFE641004FDCC5 /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F752BDFE641004FDCC5 /* NavigationBarButton.swift */; };
 		0FF16F782BE00354004FDCC5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F772BE00354004FDCC5 /* Utils.swift */; };
+		0FF16F7B2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F7A2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift */; };
+		0FF16F7F2BE0CBED004FDCC5 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F7E2BE0CBED004FDCC5 /* AuthorizationViewController.swift */; };
+		0FF16F812BE0CC06004FDCC5 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F802BE0CC06004FDCC5 /* AuthorizationView.swift */; };
+		0FF16F832BE0CD95004FDCC5 /* DiPSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF16F822BE0CD95004FDCC5 /* DiPSecondaryButton.swift */; };
 		593177F4BECE47AF1962C683 /* libPods-DocInPoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F2CCA013EF416510D128D6 /* libPods-DocInPoc.a */; };
 /* End PBXBuildFile section */
 
@@ -128,11 +132,15 @@
 		0FC9DCB22BDE5ADF00C35785 /* LanguageChooseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageChooseCoordinator.swift; sourceTree = "<group>"; };
 		0FC9DCB52BDE5DA000C35785 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		0FC9DCB72BDE5DB600C35785 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		0FC9DCBA2BDE61D400C35785 /* DiPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiPButton.swift; sourceTree = "<group>"; };
+		0FC9DCBA2BDE61D400C35785 /* DiPPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiPPrimaryButton.swift; sourceTree = "<group>"; };
 		0FC9DCBC2BDE68F100C35785 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		0FF16F722BDFE58F004FDCC5 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		0FF16F752BDFE641004FDCC5 /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
 		0FF16F772BE00354004FDCC5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0FF16F7A2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		0FF16F7E2BE0CBED004FDCC5 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		0FF16F802BE0CC06004FDCC5 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		0FF16F822BE0CD95004FDCC5 /* DiPSecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiPSecondaryButton.swift; sourceTree = "<group>"; };
 		4A8E8812A7E26192AC4550B5 /* Pods-DocInPoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocInPoc.release.xcconfig"; path = "Target Support Files/Pods-DocInPoc/Pods-DocInPoc.release.xcconfig"; sourceTree = "<group>"; };
 		95F2CCA013EF416510D128D6 /* libPods-DocInPoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DocInPoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFF56737BA3CADE1D324129 /* Pods-DocInPoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocInPoc.debug.xcconfig"; path = "Target Support Files/Pods-DocInPoc/Pods-DocInPoc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +277,7 @@
 		0FC9DC6A2BDE48C100C35785 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0FF16F7D2BE0CBE1004FDCC5 /* Authorization */,
 				0FC9DCB42BDE5D6C00C35785 /* Onboarding */,
 				0FC9DC6B2BDE48C800C35785 /* BaseViewController.swift */,
 			);
@@ -327,9 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC9DC772BDE4A5500C35785 /* Language Choose */,
-				0FC9DCB52BDE5DA000C35785 /* OnboardingViewController.swift */,
-				0FC9DCB72BDE5DB600C35785 /* OnboardingView.swift */,
-				0FC9DCBC2BDE68F100C35785 /* OnboardingCell.swift */,
+				0FF16F792BE0C4A6004FDCC5 /* Onboarding */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -337,7 +344,8 @@
 		0FC9DCB92BDE61CC00C35785 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				0FC9DCBA2BDE61D400C35785 /* DiPButton.swift */,
+				0FC9DCBA2BDE61D400C35785 /* DiPPrimaryButton.swift */,
+				0FF16F822BE0CD95004FDCC5 /* DiPSecondaryButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -362,6 +370,34 @@
 				0FF16F752BDFE641004FDCC5 /* NavigationBarButton.swift */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		0FF16F792BE0C4A6004FDCC5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0FC9DCB52BDE5DA000C35785 /* OnboardingViewController.swift */,
+				0FF16F7A2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift */,
+				0FF16F7C2BE0C4F5004FDCC5 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0FF16F7C2BE0C4F5004FDCC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FC9DCB72BDE5DB600C35785 /* OnboardingView.swift */,
+				0FC9DCBC2BDE68F100C35785 /* OnboardingCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0FF16F7D2BE0CBE1004FDCC5 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				0FF16F7E2BE0CBED004FDCC5 /* AuthorizationViewController.swift */,
+				0FF16F802BE0CC06004FDCC5 /* AuthorizationView.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		64199C01D6AC63A4B3B6DE20 /* Pods */ = {
@@ -501,9 +537,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF16F7F2BE0CBED004FDCC5 /* AuthorizationViewController.swift in Sources */,
 				0FA0569C2BDD724F00582E85 /* WorkerFactory.swift in Sources */,
 				0FA056912BDD71E700582E85 /* AppCoordinator.swift in Sources */,
 				0FC9DC8E2BDE4FD700C35785 /* NSMutableAttributedString + Ext.swift in Sources */,
+				0FF16F7B2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift in Sources */,
 				0FC9DC642BDE486E00C35785 /* NetworkChecker.swift in Sources */,
 				0FC9DCA82BDE50F700C35785 /* Reusable.swift in Sources */,
 				0FC9DC622BDE486300C35785 /* ViewSpecificController.swift in Sources */,
@@ -539,9 +577,11 @@
 				0FF16F762BDFE641004FDCC5 /* NavigationBarButton.swift in Sources */,
 				0FF16F732BDFE58F004FDCC5 /* NavigationBarView.swift in Sources */,
 				0FC9DC722BDE493800C35785 /* BaseResponse.swift in Sources */,
-				0FC9DCBB2BDE61D400C35785 /* DiPButton.swift in Sources */,
+				0FC9DCBB2BDE61D400C35785 /* DiPPrimaryButton.swift in Sources */,
 				0FC9DCBD2BDE68F100C35785 /* OnboardingCell.swift in Sources */,
 				0FC9DC9C2BDE507600C35785 /* UIApplication + Ext.swift in Sources */,
+				0FF16F812BE0CC06004FDCC5 /* AuthorizationView.swift in Sources */,
+				0FF16F832BE0CD95004FDCC5 /* DiPSecondaryButton.swift in Sources */,
 				0FC9DCAC2BDE511200C35785 /* UIButton + Ext.swift in Sources */,
 				0FC9DCB82BDE5DB600C35785 /* OnboardingView.swift in Sources */,
 				0FC9DC602BDE47FE00C35785 /* BaseProtocol.swift in Sources */,
@@ -706,6 +746,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,6 +779,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

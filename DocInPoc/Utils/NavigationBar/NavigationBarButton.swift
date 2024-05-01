@@ -26,6 +26,10 @@ final class NavigationBarButton: UIButton {
         button.setTitleColor(.Gray.appGray, for: .normal)
         button.setTitle(title, for: .normal)
         button.titleLabel?.font = .regularFont(size: 16)
+        button.snp.makeConstraints({
+            $0.width.equalTo(button.intrinsicContentSize.width + 18)
+            $0.height.equalTo(22)
+        })
         return button
     }
 
