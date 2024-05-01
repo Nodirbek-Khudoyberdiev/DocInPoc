@@ -31,7 +31,7 @@ private extension DiPPrimaryButton {
         borderRadius = 16
         setBackgroundColor(color: .appPrimaryColor, forState: .normal)
         setBackgroundColor(color: .appPrimaryColor.withAlphaComponent(0.6), forState: .highlighted)
-        setBackgroundColor(color: .appPrimaryColor.withAlphaComponent(0.6), forState: .disabled)
+        setBackgroundColor(color: .Gray.appGray, forState: .disabled)
         snp.makeConstraints({
             $0.height.equalTo(48)
         })
