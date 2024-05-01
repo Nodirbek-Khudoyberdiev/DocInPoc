@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3598B02BE2C333005951BD /* RegisterTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */; };
+		0F3598B22BE2C342005951BD /* RegisterTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B12BE2C342005951BD /* RegisterTypeView.swift */; };
+		0F3598B42BE2CB11005951BD /* RegisterTypeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */; };
+		0F3598B62BE2CB22005951BD /* RegisterTypeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B52BE2CB22005951BD /* RegisterTypeStackView.swift */; };
+		0F3598B92BE2D01E005951BD /* RegisterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B82BE2D01E005951BD /* RegisterType.swift */; };
 		0F7B3FBC2BDC3A6500F34827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B3FBB2BDC3A6500F34827 /* AppDelegate.swift */; };
 		0F7B3FBE2BDC3A6500F34827 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B3FBD2BDC3A6500F34827 /* SceneDelegate.swift */; };
 		0F7B3FC02BDC3A6500F34827 /* LanguageChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B3FBF2BDC3A6500F34827 /* LanguageChooseViewController.swift */; };
@@ -75,6 +80,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeViewController.swift; sourceTree = "<group>"; };
+		0F3598B12BE2C342005951BD /* RegisterTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeView.swift; sourceTree = "<group>"; };
+		0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeCategoryView.swift; sourceTree = "<group>"; };
+		0F3598B52BE2CB22005951BD /* RegisterTypeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeStackView.swift; sourceTree = "<group>"; };
+		0F3598B82BE2D01E005951BD /* RegisterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterType.swift; sourceTree = "<group>"; };
 		0F7B3FB82BDC3A6500F34827 /* DocInPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocInPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7B3FBB2BDC3A6500F34827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7B3FBD2BDC3A6500F34827 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +168,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3598AB2BE2C30A005951BD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0FF16F7E2BE0CBED004FDCC5 /* AuthorizationViewController.swift */,
+				0FF16F802BE0CC06004FDCC5 /* AuthorizationView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0F3598AC2BE2C310005951BD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0F3598AD2BE2C314005951BD /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		0F3598AE2BE2C31C005951BD /* RegisterType */ = {
+			isa = PBXGroup;
+			children = (
+				0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */,
+				0F3598B82BE2D01E005951BD /* RegisterType.swift */,
+				0F3598B72BE2CFBD005951BD /* Views */,
+			);
+			path = RegisterType;
+			sourceTree = "<group>";
+		};
+		0F3598B72BE2CFBD005951BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F3598B12BE2C342005951BD /* RegisterTypeView.swift */,
+				0F3598B52BE2CB22005951BD /* RegisterTypeStackView.swift */,
+				0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0F7B3FAF2BDC3A6500F34827 = {
 			isa = PBXGroup;
 			children = (
@@ -394,8 +447,10 @@
 		0FF16F7D2BE0CBE1004FDCC5 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				0FF16F7E2BE0CBED004FDCC5 /* AuthorizationViewController.swift */,
-				0FF16F802BE0CC06004FDCC5 /* AuthorizationView.swift */,
+				0F3598AB2BE2C30A005951BD /* Auth */,
+				0F3598AE2BE2C31C005951BD /* RegisterType */,
+				0F3598AD2BE2C314005951BD /* Register */,
+				0F3598AC2BE2C310005951BD /* Login */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -539,6 +594,7 @@
 			files = (
 				0FF16F7F2BE0CBED004FDCC5 /* AuthorizationViewController.swift in Sources */,
 				0FA0569C2BDD724F00582E85 /* WorkerFactory.swift in Sources */,
+				0F3598B42BE2CB11005951BD /* RegisterTypeCategoryView.swift in Sources */,
 				0FA056912BDD71E700582E85 /* AppCoordinator.swift in Sources */,
 				0FC9DC8E2BDE4FD700C35785 /* NSMutableAttributedString + Ext.swift in Sources */,
 				0FF16F7B2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift in Sources */,
@@ -556,6 +612,7 @@
 				0FC9DCB62BDE5DA000C35785 /* OnboardingViewController.swift in Sources */,
 				0FC9DC9A2BDE506D00C35785 /* UIViewController + Ext.swift in Sources */,
 				0FC9DCAE2BDE512500C35785 /* ObservableType + Ext.swift in Sources */,
+				0F3598B22BE2C342005951BD /* RegisterTypeView.swift in Sources */,
 				0FC9DCB02BDE547C00C35785 /* LanguageCellView.swift in Sources */,
 				0FC9DC5D2BDE47DF00C35785 /* KeychainStore.swift in Sources */,
 				0FC9DC662BDE487900C35785 /* Localization.swift in Sources */,
@@ -578,6 +635,7 @@
 				0FF16F732BDFE58F004FDCC5 /* NavigationBarView.swift in Sources */,
 				0FC9DC722BDE493800C35785 /* BaseResponse.swift in Sources */,
 				0FC9DCBB2BDE61D400C35785 /* DiPPrimaryButton.swift in Sources */,
+				0F3598B92BE2D01E005951BD /* RegisterType.swift in Sources */,
 				0FC9DCBD2BDE68F100C35785 /* OnboardingCell.swift in Sources */,
 				0FC9DC9C2BDE507600C35785 /* UIApplication + Ext.swift in Sources */,
 				0FF16F812BE0CC06004FDCC5 /* AuthorizationView.swift in Sources */,
@@ -589,6 +647,8 @@
 				0FC9DC582BDE447500C35785 /* NavigationController.swift in Sources */,
 				0F7B3FBE2BDC3A6500F34827 /* SceneDelegate.swift in Sources */,
 				0FC9DCA62BDE50EB00C35785 /* UICollectionView + Ext.swift in Sources */,
+				0F3598B62BE2CB22005951BD /* RegisterTypeStackView.swift in Sources */,
+				0F3598B02BE2C333005951BD /* RegisterTypeViewController.swift in Sources */,
 				0FC9DCA42BDE50DD00C35785 /* UITableView + Ext.swift in Sources */,
 				0FC9DC792BDE4A5D00C35785 /* LanguageChooseView.swift in Sources */,
 				0FC9DCB32BDE5ADF00C35785 /* LanguageChooseCoordinator.swift in Sources */,

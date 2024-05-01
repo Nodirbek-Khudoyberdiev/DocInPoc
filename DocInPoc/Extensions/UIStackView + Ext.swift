@@ -31,6 +31,7 @@ extension UIStackView {
         axis: NSLayoutConstraint.Axis,
         alignment: UIStackView.Alignment,
         distribution: UIStackView.Distribution,
+        layoutMargins: UIEdgeInsets? = nil,
         spacing: CGFloat,
         views: [UIView]? = nil
     ) {
@@ -39,6 +40,10 @@ extension UIStackView {
         self.spacing = spacing
         self.alignment = alignment
         self.distribution = distribution
+        if let layoutMargins = layoutMargins {
+            self.layoutMargins = layoutMargins
+            isLayoutMarginsRelativeArrangement = true
+        }
     }
     
 }

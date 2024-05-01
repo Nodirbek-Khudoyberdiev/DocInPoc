@@ -28,6 +28,7 @@ extension UIColor {
     
     static let appPrimaryColor = UIColor(hex: "199A8E")
     static let appDarkColor = UIColor(hex: "101623")
+    static let appBorderColor = UIColor(hex: "E5E7EB")
     
     struct Gray {
         static let appGray = UIColor(hex: "677294")
