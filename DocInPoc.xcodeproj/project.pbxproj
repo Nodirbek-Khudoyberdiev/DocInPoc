@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2E76E82BE36A84004A5E8B /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76E72BE36A84004A5E8B /* HapticsManager.swift */; };
+		0F2E76EA2BE37395004A5E8B /* LanguageContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76E92BE37395004A5E8B /* LanguageContentStackView.swift */; };
 		0F3598B02BE2C333005951BD /* RegisterTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */; };
 		0F3598B22BE2C342005951BD /* RegisterTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B12BE2C342005951BD /* RegisterTypeView.swift */; };
 		0F3598B42BE2CB11005951BD /* RegisterTypeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */; };
@@ -80,6 +82,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2E76E72BE36A84004A5E8B /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		0F2E76E92BE37395004A5E8B /* LanguageContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageContentStackView.swift; sourceTree = "<group>"; };
 		0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeViewController.swift; sourceTree = "<group>"; };
 		0F3598B12BE2C342005951BD /* RegisterTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeView.swift; sourceTree = "<group>"; };
 		0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeCategoryView.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 			children = (
 				0FC9DC5A2BDE47CF00C35785 /* APIClient.swift */,
 				0FC9DC5C2BDE47DF00C35785 /* KeychainStore.swift */,
+				0F2E76E72BE36A84004A5E8B /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC9DC782BDE4A5D00C35785 /* LanguageChooseView.swift */,
+				0F2E76E92BE37395004A5E8B /* LanguageContentStackView.swift */,
 				0FC9DCAF2BDE547C00C35785 /* LanguageCellView.swift */,
 			);
 			path = Views;
@@ -598,6 +604,7 @@
 				0FA056912BDD71E700582E85 /* AppCoordinator.swift in Sources */,
 				0FC9DC8E2BDE4FD700C35785 /* NSMutableAttributedString + Ext.swift in Sources */,
 				0FF16F7B2BE0C4B3004FDCC5 /* OnboardingCoordinator.swift in Sources */,
+				0F2E76EA2BE37395004A5E8B /* LanguageContentStackView.swift in Sources */,
 				0FC9DC642BDE486E00C35785 /* NetworkChecker.swift in Sources */,
 				0FC9DCA82BDE50F700C35785 /* Reusable.swift in Sources */,
 				0FC9DC622BDE486300C35785 /* ViewSpecificController.swift in Sources */,
@@ -606,6 +613,7 @@
 				0FC9DC982BDE506100C35785 /* Array + Ext.swift in Sources */,
 				0FC9DC942BDE501100C35785 /* UIColor + Ext.swift in Sources */,
 				0FC9DC8C2BDE4F9300C35785 /* UIStackView + Ext.swift in Sources */,
+				0F2E76E82BE36A84004A5E8B /* HapticsManager.swift in Sources */,
 				0FC9DC962BDE505500C35785 /* UIView + Ext.swift in Sources */,
 				0FC9DC6C2BDE48C800C35785 /* BaseViewController.swift in Sources */,
 				0FC9DC692BDE489500C35785 /* Userdefaults + Ext.swift in Sources */,

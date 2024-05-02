@@ -8,10 +8,10 @@
 import UIKit
 
 enum Localization: String, CaseIterable {
+    case UZ = "uz"
     case ENGLISH = "en"
     case RUSSIAN = "ru"
-    case UZ = "uz"
-//    case UzCyrclic = "uz-Cyrl"
+    case UzCyrclic = "uz-Cyrl"
     
     private static func getValue(_ key: String, comment: String?) -> String {
         let localCode = UserDefaults.standard.getLocaleCode()
@@ -32,9 +32,8 @@ enum Localization: String, CaseIterable {
             return "O'zbek"
         case .RUSSIAN:
             return "Русский"
-            //        case .UzCyrclic:
-            //            return "Ўзбекча"
-            //        }
+        case .UzCyrclic:
+            return "Ўзбекча"
         }
     }
     
@@ -44,8 +43,22 @@ enum Localization: String, CaseIterable {
             return .us
         case .RUSSIAN:
             return .ru
-        case .UZ:
+        case .UZ, .UzCyrclic:
             return .uz
         }
     }
+    
+    var subtitle: String {
+        switch self {
+        case .UZ:
+            return "Iltimos, foydalanishni davom ettirish uchun tilni tanlang"
+        case .RUSSIAN:
+            return "Пожалуйста, выберите язык, чтобы продолжить использование"
+        case .ENGLISH:
+            return "Please select a language to continue using"
+        case .UzCyrclic:
+            return "Илтимос, фойдаланишни давом эттириш учун тилни танланг"
+        }
+    }
+    
 }

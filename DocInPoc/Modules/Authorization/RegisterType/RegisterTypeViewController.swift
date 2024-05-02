@@ -31,6 +31,7 @@ private extension RegisterTypeViewController {
 
 extension RegisterTypeViewController: RegisterTypeStackViewDelegate {
     func didSelectCategory(type: RegisterType) {
+        HapticsManager.shared.vibrateForSelection()
         mainView().contentView.typeStackView
             .arrangedSubviews
             .compactMap({
