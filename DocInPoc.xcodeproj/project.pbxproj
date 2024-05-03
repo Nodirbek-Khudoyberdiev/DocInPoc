@@ -359,9 +359,9 @@
 		0FC9DC6A2BDE48C100C35785 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0FC9DC6B2BDE48C800C35785 /* BaseViewController.swift */,
 				0FF16F7D2BE0CBE1004FDCC5 /* Authorization */,
 				0FC9DCB42BDE5D6C00C35785 /* Onboarding */,
-				0FC9DC6B2BDE48C800C35785 /* BaseViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
