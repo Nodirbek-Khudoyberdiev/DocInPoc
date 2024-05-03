@@ -9,7 +9,7 @@ import UIKit
 
 final class NavigationBarButton: UIButton {
     
-    static func builderButton(with image: UIImage, size: Double = 24) -> NavigationBarButton {
+    static func builderButton(with image: UIImage? = nil, size: Double = 24) -> NavigationBarButton {
         let button = NavigationBarButton()
         button.setImage(image, for: .normal)
         button.tintColor = .appDarkColor

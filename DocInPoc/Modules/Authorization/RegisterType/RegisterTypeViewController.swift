@@ -26,6 +26,14 @@ private extension RegisterTypeViewController {
         mainView().navigationBarView.onLeftButton = {[weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
+        mainView().nextButton
+            .rx
+            .tap
+            .subscribe(onNext: {
+                let vc = RegisterViewController(viewModel: RegisterViewModel())
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: bag)
     }
 }
 

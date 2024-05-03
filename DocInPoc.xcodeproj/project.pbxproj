@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0F2E76E82BE36A84004A5E8B /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76E72BE36A84004A5E8B /* HapticsManager.swift */; };
 		0F2E76EA2BE37395004A5E8B /* LanguageContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76E92BE37395004A5E8B /* LanguageContentStackView.swift */; };
+		0F2E76EC2BE37867004A5E8B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76EB2BE37867004A5E8B /* RegisterViewController.swift */; };
+		0F2E76EE2BE37877004A5E8B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76ED2BE37877004A5E8B /* RegisterView.swift */; };
+		0F2E76F02BE37919004A5E8B /* DiPPrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76EF2BE37919004A5E8B /* DiPPrimaryTextField.swift */; };
+		0F2E76F22BE388C0004A5E8B /* RegisterContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76F12BE388C0004A5E8B /* RegisterContentStackView.swift */; };
+		0F2E76F52BE38903004A5E8B /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76F42BE38903004A5E8B /* AgreementView.swift */; };
+		0F2E76F72BE39786004A5E8B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2E76F62BE39786004A5E8B /* RegisterViewModel.swift */; };
 		0F3598B02BE2C333005951BD /* RegisterTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */; };
 		0F3598B22BE2C342005951BD /* RegisterTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B12BE2C342005951BD /* RegisterTypeView.swift */; };
 		0F3598B42BE2CB11005951BD /* RegisterTypeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */; };
@@ -84,6 +90,12 @@
 /* Begin PBXFileReference section */
 		0F2E76E72BE36A84004A5E8B /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		0F2E76E92BE37395004A5E8B /* LanguageContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageContentStackView.swift; sourceTree = "<group>"; };
+		0F2E76EB2BE37867004A5E8B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0F2E76ED2BE37877004A5E8B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0F2E76EF2BE37919004A5E8B /* DiPPrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiPPrimaryTextField.swift; sourceTree = "<group>"; };
+		0F2E76F12BE388C0004A5E8B /* RegisterContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterContentStackView.swift; sourceTree = "<group>"; };
+		0F2E76F42BE38903004A5E8B /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
+		0F2E76F62BE39786004A5E8B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		0F3598AF2BE2C333005951BD /* RegisterTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeViewController.swift; sourceTree = "<group>"; };
 		0F3598B12BE2C342005951BD /* RegisterTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeView.swift; sourceTree = "<group>"; };
 		0F3598B32BE2CB11005951BD /* RegisterTypeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTypeCategoryView.swift; sourceTree = "<group>"; };
@@ -172,6 +184,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F2E76F32BE388D2004A5E8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F2E76ED2BE37877004A5E8B /* RegisterView.swift */,
+				0F2E76F12BE388C0004A5E8B /* RegisterContentStackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0F3598AB2BE2C30A005951BD /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +212,9 @@
 		0F3598AD2BE2C314005951BD /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E76EB2BE37867004A5E8B /* RegisterViewController.swift */,
+				0F2E76F62BE39786004A5E8B /* RegisterViewModel.swift */,
+				0F2E76F32BE388D2004A5E8B /* Views */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -403,8 +427,10 @@
 		0FC9DCB92BDE61CC00C35785 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				0F2E76F42BE38903004A5E8B /* AgreementView.swift */,
 				0FC9DCBA2BDE61D400C35785 /* DiPPrimaryButton.swift */,
 				0FF16F822BE0CD95004FDCC5 /* DiPSecondaryButton.swift */,
+				0F2E76EF2BE37919004A5E8B /* DiPPrimaryTextField.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -614,6 +640,8 @@
 				0FC9DC942BDE501100C35785 /* UIColor + Ext.swift in Sources */,
 				0FC9DC8C2BDE4F9300C35785 /* UIStackView + Ext.swift in Sources */,
 				0F2E76E82BE36A84004A5E8B /* HapticsManager.swift in Sources */,
+				0F2E76F02BE37919004A5E8B /* DiPPrimaryTextField.swift in Sources */,
+				0F2E76F52BE38903004A5E8B /* AgreementView.swift in Sources */,
 				0FC9DC962BDE505500C35785 /* UIView + Ext.swift in Sources */,
 				0FC9DC6C2BDE48C800C35785 /* BaseViewController.swift in Sources */,
 				0FC9DC692BDE489500C35785 /* Userdefaults + Ext.swift in Sources */,
@@ -639,10 +667,13 @@
 				0FA056982BDD723600582E85 /* DependencyContainer.swift in Sources */,
 				0FC9DC8A2BDE4F7E00C35785 /* UILabel + Ext.swift in Sources */,
 				0FC9DC902BDE4FE600C35785 /* UIImageView + Ext.swift in Sources */,
+				0F2E76F72BE39786004A5E8B /* RegisterViewModel.swift in Sources */,
+				0F2E76EE2BE37877004A5E8B /* RegisterView.swift in Sources */,
 				0FF16F762BDFE641004FDCC5 /* NavigationBarButton.swift in Sources */,
 				0FF16F732BDFE58F004FDCC5 /* NavigationBarView.swift in Sources */,
 				0FC9DC722BDE493800C35785 /* BaseResponse.swift in Sources */,
 				0FC9DCBB2BDE61D400C35785 /* DiPPrimaryButton.swift in Sources */,
+				0F2E76F22BE388C0004A5E8B /* RegisterContentStackView.swift in Sources */,
 				0F3598B92BE2D01E005951BD /* RegisterType.swift in Sources */,
 				0FC9DCBD2BDE68F100C35785 /* OnboardingCell.swift in Sources */,
 				0FC9DC9C2BDE507600C35785 /* UIApplication + Ext.swift in Sources */,
@@ -657,6 +688,7 @@
 				0FC9DCA62BDE50EB00C35785 /* UICollectionView + Ext.swift in Sources */,
 				0F3598B62BE2CB22005951BD /* RegisterTypeStackView.swift in Sources */,
 				0F3598B02BE2C333005951BD /* RegisterTypeViewController.swift in Sources */,
+				0F2E76EC2BE37867004A5E8B /* RegisterViewController.swift in Sources */,
 				0FC9DCA42BDE50DD00C35785 /* UITableView + Ext.swift in Sources */,
 				0FC9DC792BDE4A5D00C35785 /* LanguageChooseView.swift in Sources */,
 				0FC9DCB32BDE5ADF00C35785 /* LanguageChooseCoordinator.swift in Sources */,
