@@ -45,12 +45,8 @@ final class NavigationBarView: UIView {
     ){
         self.init(frame: .zero)
         self.title = title
-        if let leftImage {
-            leftButton = NavigationBarButton.builderButton(with: leftImage)
-        }
-        if let rightImage {
-            rightButton = NavigationBarButton.builderButton(with: rightImage)
-        }
+        leftButton = NavigationBarButton.builderButton(with: leftImage)
+        rightButton = NavigationBarButton.builderButton(with: rightImage)
         setupNavigationBar()
     }
     
@@ -61,12 +57,9 @@ final class NavigationBarView: UIView {
     ){
         self.init(frame: .zero)
         self.title = title
-        if let leftTitle {
-            leftButton = NavigationBarButton.builderButton(with: leftTitle, alignment: .left)
-        }
-        if let rightTitle {
-            rightButton = NavigationBarButton.builderButton(with: rightTitle, alignment: .right)
-        }
+        leftButton = NavigationBarButton.builderButton(with: leftTitle ?? "", alignment: .left)
+        rightButton = NavigationBarButton.builderButton(with: rightTitle ?? "", alignment: .right)
+        
         setupNavigationBar()
     }
     
@@ -134,8 +127,8 @@ private extension NavigationBarView {
         
         titleLabel.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(NavigationConstants.inset)
-            $0.left.equalTo(leftButton != nil ? leftButton!.snp.right : self).offset(NavigationConstants.inset)
-            $0.right.equalTo(rightButton != nil ? rightButton!.snp.left : self).offset(-NavigationConstants.inset)
+            $0.left.equalTo(leftButton!.snp.right).offset(NavigationConstants.inset)
+            $0.right.equalTo(rightButton!.snp.left).offset(-NavigationConstants.inset)
         }
 
     }
@@ -151,3 +144,9 @@ private extension NavigationBarView {
 }
 
 
+extension NavigationBarView {
+    static func defaultNavigationbar(title: String? = nil) -> NavigationBarView {
+        let view = NavigationBarView(title: title ?? "", leftImage: .arrowLeft)
+        return view
+    }
+}

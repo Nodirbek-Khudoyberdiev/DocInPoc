@@ -33,6 +33,14 @@ private extension AuthorizationViewController {
                 self?.mainView().reload()
             })
             .disposed(by: bag)
+        mainView().registerButton
+            .rx
+            .tap
+            .subscribe(onNext: {
+                let vc = RegisterTypeViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: bag)
     }
     
     func didSelectLanguage(){
@@ -45,7 +53,6 @@ private extension AuthorizationViewController {
         })
         
         let menu = UIMenu(
-            title: UserDefaults.standard.getLocaleCode().title,
             children: actions
         )
         mainView().countryButton.showsMenuAsPrimaryAction = true

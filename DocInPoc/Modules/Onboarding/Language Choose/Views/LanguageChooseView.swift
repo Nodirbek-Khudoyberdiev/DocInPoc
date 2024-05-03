@@ -10,33 +10,9 @@ import SnapKit
 
 final class LanguageChooseView: BaseView {
     
-    enum LanguageChoose {
-        case uz
-        case ru
-        case eng
-        
-        var title: String {
-            switch self {
-            case .uz:
-                return "Iltimos, foydalanishni davom ettirish uchun tilni tanlang"
-            case .ru:
-                return "Пожалуйста, выберите язык, чтобы продолжить использование"
-            case .eng:
-                return "Please select a language to continue using"
-            }
-        }
-    }
-    
-    private lazy var titlesStackView: UIStackView = {
-        let stackView = UIStackView(
-            axis: .vertical,
-            distribution: .fill,
-            alignment: .fill,
-            layoutMargins: nil,
-            spacing: 12
-        )
-        return stackView
-    }()
+    let delegate: LanguageCellDelegate?
+    let scrollView = UIScrollView()
+    lazy var contentStackView = LanguageChooseContentStackView(delegate: delegate)
     
     private lazy var languagesStackView: UIStackView = {
         let stackView = UIStackView(
@@ -49,69 +25,47 @@ final class LanguageChooseView: BaseView {
         return stackView
     }()
     
-    private lazy var dipImageView: UIImageView = {
-        let imageView = UIImageView(image: .dipLogo)
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
-    
-    let delegate: LanguageCellDelegate?
-    
     init(delegate: LanguageCellDelegate?) {
         self.delegate = delegate
         super.init(frame: .zero)
     }
     
-    required init?(coder: NSCoder) {
+    required init(coder: NSCoder) {
         fatalError()
     }
     
     func setup() {
-        let uzTitle = generateTitleLabel(.mediumFont(size: 22), type: .uz, color: .appDarkColor)
-        let engTitle = generateTitleLabel(.mediumFont(size: 14), type: .eng, color: .Gray.appGray)
-        let ruTitle = generateTitleLabel(.mediumFont(size: 14), type: .ru, color: .Gray.appGray)
-        [uzTitle, engTitle, ruTitle].forEach({
-            titlesStackView.addArrangedSubview($0)
-        })
-        
-        [Localization.UZ, Localization.ENGLISH, Localization.RUSSIAN].forEach({
+        Localization.allCases.forEach({
             let cell = LanguageCellView()
             cell.buildCell(with: $0)
             cell.delegate = delegate
             languagesStackView.addArrangedSubview(cell)
         })
         
-        addSubviews(
-            dipImageView,
-            titlesStackView,
-            languagesStackView
-        )
+        scrollView.showsVerticalScrollIndicator = false
+        addSubviews(scrollView, languagesStackView)
+        scrollView.addSubview(contentStackView)
+        
     }
     
     func setupConstrains() {
-        dipImageView.snp.makeConstraints({
+        scrollView.snp.makeConstraints({
             $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(36)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(104)
-            $0.height.equalTo(157)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(languagesStackView.snp.top)
         })
         
-        titlesStackView.snp.makeConstraints({
-            $0.top.equalTo(dipImageView.snp.bottom).offset(25)
-            $0.left.right.equalToSuperview().inset(16)
+        contentStackView.snp.makeConstraints({
+            $0.left.right.equalTo(self).inset(16)
+            $0.top.bottom.equalToSuperview()
         })
         
         languagesStackView.snp.makeConstraints({
-            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).inset(12)
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-12)
             $0.left.right.equalToSuperview()
         })
     }
     
-    func generateTitleLabel(_ font: UIFont, type: LanguageChoose, color: UIColor) -> UILabel {
-        let label = UILabel(text: type.title, font: font, color: color, lines: 0, alignment: .center)
-        return label
-    }
-    
 }
+
 
